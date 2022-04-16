@@ -61,17 +61,18 @@ body {
 //<ОСНОВНАЯ СЕТКА>===========================================================================================================
 ._container {
 	max-width: $maxWidthContainer + px;
+	width: 90%;
 	margin: 0 auto;
-	@media (max-width: $md1 + px) {
-		max-width: 970px;
-	}
-	@media (max-width: $md2+px) {
-		max-width: 750px;
-	}
-	@media (max-width: $md3+px) {
-		max-width: none;
-		padding: 0 10px;
-	}
+	//@media (max-width: $md1 + px) {
+	//	max-width: 970px;
+	//}
+	//@media (max-width: $md2+px) {
+	//	max-width: 750px;
+	//}
+	//@media (max-width: $md3+px) {
+	//	max-width: none;
+	//	padding: 0 10px;
+	//}
 }
 //</ОСНОВНАЯ СЕТКА>===========================================================================================================
 
@@ -93,7 +94,63 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+	min-height: 100vh;
 }
 //===================================================================================================================================
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
+.fullscreen {
+	display: flex;
+	min-height: 100vh;
+	background-color: #00aced;
+}
+.hero {
+	background-image: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%),
+	url("../img/hero_bg.png");
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.hero__content {
+	display: flex;
+	flex-direction: column;
+
+	.nav__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		height: 10rem;
+		.vertical__bar {
+			height: 40%;
+			width: .2rem;
+			background-color: #fff;
+			opacity: 0.5;
+			margin:  0 10% 0 5%;
+		}
+		.nav__menu {
+			width: 100%;
+			.menu__body {
+				width: 100%;
+				.menu__list {
+					display: flex;
+					justify-content: center;
+					li{
+						margin: 0 3rem;
+					}
+					.menu__link {
+						color: #fff;
+						text-transform: uppercase;
+						font-weight: 700;
+						font-size: 1.2rem;
+						line-height: 133%;
+						letter-spacing: 0.1em;
+						&:hover {
+							color: #77243a;
+							transition: color 0.5s ease;
+						}
+					}
+				}
+			}
+		}
+	}
+}
